@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        input:focus {
+            box-shadow: none !important;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="container pt-4">
+        <div class="w-25">
+            <div class="border  p-4 rounded">
+                <form class="needs-validation" novalidate>
+                    <div class="mb-3 ">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="" class="form-control" required id="username" placeholder="">
+                        <span class="invalid-feedback">Username is compulsory</span>
+                        <span class="valid-feedback">Correct Username</span>
+                    </div>
+                    <div class="mb-3 ">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="" class="form-control" required id="password" placeholder="">
+                    </div>
+                    <div class="form-check mb-3">
+                        <input type="checkbox" id="remember" class="form-check-input " required>
+                        <label for="remember" class="form-check-label">Remember Me</label>
+                        <span class="invalid-feedback">
+                            You must agree before submitting.
+                          </span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+
+
+</body>
+
+</html>
